@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Service Worker
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>  
+    <ion-item *ngFor="let movie of movies | async">
+      <h2 color="primary">{{movie.title}}</h2>
+    </ion-item>
+  </ion-list>
+  
+  <ion-buttons end>
+    <button ion-button icon-only (click)="addMovie()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-content>
